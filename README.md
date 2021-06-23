@@ -1,4 +1,20 @@
-# AngularLogin
+# Ericsson
+
+This a Student Management System with the following functionalities:
+
+1. You can 'Register' yourself as an administrator to manage list of students.
+
+2. You can then login using your email and password.
+
+3. Every field of registration, login and student registration has validation.
+
+4. After successfully register and login, you can add, edit or delete students in a student list.
+
+5. All data will be saved in local storage.
+
+6. To creat the list of students 'Observable' pattern is being followed.
+
+7. You can logout.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.0.2.
 
