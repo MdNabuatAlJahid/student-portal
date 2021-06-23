@@ -1,0 +1,60 @@
+<div class="container">
+  <div class="student">
+    <div style="background-color: #adafad">
+      <form
+        class="main-form"
+        (ngSubmit)="this.studentForm.valid && onSubmit()"
+        [formGroup]="this.studentForm"
+      >
+        <h3>Add Student</h3>
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Name"
+            type="text"
+            formControlName="name"
+            name="name"
+            [(ngModel)]="name"
+          />
+          <mat-error>Name is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Matriculation"
+            type="number"
+            formControlName="matriculation"
+            name="matriculation"
+            [(ngModel)]="matriculation"
+          />
+          <mat-error> Matriculation is required</mat-error>
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <input
+            matInput
+            placeholder="Subject"
+            type="text"
+            formControlName="subject"
+            name="subject"
+            [(ngModel)]="subject"
+          />
+          <mat-error> Subject is required</mat-error>
+        </mat-form-field>
+
+        <div class="buttons">
+          <button
+            mat-button
+            style="background-color: dimgray; color: white"
+            type="submit"
+            [disabled]="!studentForm.valid"
+          >
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<app-student-list></app-student-list>

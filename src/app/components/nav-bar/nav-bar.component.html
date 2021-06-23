@@ -1,0 +1,21 @@
+<mat-toolbar>
+  <mat-toolbar-row class="menu">
+    <button mat-icon-button sty>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span class="menu-spacer"></span>
+    <div class="menu-right">
+      <a
+        mat-button
+        [routerLink]="'/student'"
+        *ngIf="loggedin()"
+        style="align-self: flex-start"
+      >
+        Student
+      </a>
+      <a mat-button [routerLink]="'/login'" *ngIf="!loggedin()"> Login </a>
+      <a mat-button *ngIf="loggedin()" (click)="onLogout()"> Logout </a>
+      <a mat-button [routerLink]="'/signup'" *ngIf="!loggedin()"> Signup </a>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

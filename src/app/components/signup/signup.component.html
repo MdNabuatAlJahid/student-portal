@@ -1,0 +1,51 @@
+<div class="container">
+  <div style="background-color: #adafad">
+    <form
+      class="main-form"
+      (ngSubmit)="this.signupForm.valid && onSubmit()"
+      [formGroup]="this.signupForm"
+    >
+      <h3>User signup</h3>
+      <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label>
+        <input formControlName="name" matInput />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Email</mat-label>
+        <input formControlName="email" matInput type="email" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Password</mat-label>
+        <input formControlName="password" matInput type="password" />
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Repeat Password</mat-label>
+        <input formControlName="confirm_password" matInput />
+      </mat-form-field>
+
+      <div>
+        <button
+          mat-button
+          style="
+            background-color: dimgray;
+            color: blanchedalmond;
+            margin-right: 10px;
+          "
+          (click)="login()"
+        >
+          Login
+        </button>
+
+        <button
+          mat-button
+          style="background-color: dimgray; color: blanchedalmond"
+        >
+          Signup
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

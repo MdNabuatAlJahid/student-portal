@@ -1,0 +1,65 @@
+<div class="container">
+  <h1>Welcome to the Student Portal at Ericsson!</h1>
+
+  <div style="background-color: #adafad">
+    <form
+      class="main-form"
+      (ngSubmit)="this.loginForm.valid && onSubmit()"
+      [formGroup]="this.loginForm"
+    >
+      <h3>User login</h3>
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Email address"
+          type="email"
+          formControlName="email"
+        />
+        <mat-error>Email is required</mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <input
+          matInput
+          placeholder="Password"
+          type="password"
+          formControlName="password"
+        />
+        <mat-error>(8-12 digits) Password is required</mat-error>
+      </mat-form-field>
+
+      <a
+        href="/password"
+        style="
+          color: aliceblue;
+          margin-bottom: 10px;
+          align-self: flex-start;
+          margin-left: 82px;
+          padding: 2px;
+        "
+        >Forgot password?</a
+      >
+
+      <div class="buttons">
+        <button
+          mat-button
+          style="background-color: dimgray; color: white"
+          type="submit"
+          [disabled]="!loginForm.valid"
+        >
+          Login
+        </button>
+
+        <button
+          mat-button
+          style="background-color: dimgray; color: white"
+          routerLink="/signup"
+          routerLinkActive="active"
+          (click)="signup()"
+        >
+          <a>Signup</a>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
